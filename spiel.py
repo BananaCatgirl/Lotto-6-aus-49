@@ -1,0 +1,2 @@
+class Spiel:
+	def spielen
