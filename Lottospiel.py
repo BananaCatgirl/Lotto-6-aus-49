@@ -1,12 +1,12 @@
-# eine Klasse welche das komplette geschehen des Lotto spieles steuert
+# eine Managenment Klasse welche das komplette geschehen des Lotto spieles steuert
 
 #es werden Lottokarten erstellt
 # es wird kassiert
 # es wird eine ziehung gestartet
 
-import LottoKarte
+import LottoKarte.LottoKarte as LottoKarte
 import Ziehung
-import Kasse
+import Kasse.Kasse as Kasse
 
 
 
