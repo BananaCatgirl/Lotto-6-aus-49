@@ -4,9 +4,9 @@
 # es wird kassiert
 # es wird eine ziehung gestartet
 
-import LottoKarte.LottoKarte as LottoKarte
-import Ziehung
-import Kasse.Kasse as Kasse
+from LottoKarte.LottoKarte import LottoKarte
+from Ziehung.Ziehung import Ziehung
+from Kasse.Kasse import Kasse
 
 
 
@@ -18,5 +18,5 @@ def main():
 		pass
 
 if __name__ == "main":
-	print("Wilkommen zu Lotto 6 aus 49")
+	print("\n\nWilkommen zu Lotto 6 aus 49\n\n")
 	main()
