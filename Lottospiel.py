@@ -1,4 +1,4 @@
-import spiel
+import Spiel
 
 
 def main():
