@@ -1,0 +1,1 @@
+#Eine klasse die eine Lotto ziehung generiert
