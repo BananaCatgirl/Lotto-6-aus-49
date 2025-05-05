@@ -12,19 +12,39 @@ from Kasse.Kasse import Kasse
 class Lottospiel:
 	def __init__(self):
 		self.Lottokarten = []
-		self.Kasse = Kasse()
-		self.Ziehung = Ziehung()
 
 	def StartLottoKarten(self):
 		try:
-			pass
+			weitererStimmzettel = True
+			while weitererStimmzettel:
+				karte = LottoKarte()
+				karte.Setup()
+				self.Lottokarten.append( karte )
+				if len(karte.GetSpiele()) == 18:
+					angabeValid = True
+					while not angabeValid:
+						angabe = input("wolen sie eine weitere Karte ausfüllen?(ja/nein): ").lower()
+						match(angabe):
+							case "ja":
+								angabeValid = True
+								weitererStimmzettel = True
+								break
+							case "nein":
+								angabeValid = True
+								weitererStimmzettel = False
+								break
+							case _:
+								angabeValid = False
+				else:
+					weitererStimmzettel = False
 		except:
 			print("Fehler beim ausführen der KartenLogic")
 
 
 	def StartKasse(self):
 		try:
-			pass
+			self.Kasse = Kasse(self.Lottokarten)
+			#abrechnung = self.Kasse.Abrechnen()
 		except:
 			print("Fehler beim ausführen der Kasse")
 

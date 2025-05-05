@@ -1,3 +1,3 @@
 class Kasse:
-	def	__init__(self):
-		pass
+	def	__init__(self,Lottokarten):
+		self.Lottokarten = Lottokarten
