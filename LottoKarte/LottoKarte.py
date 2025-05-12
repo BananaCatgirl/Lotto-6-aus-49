@@ -1,6 +1,8 @@
 class LottoKarte:
 	def __init__(self):
-		pass
+		self.spiele = []
+		self.mittwochsZiehung = False
+		self.SamstagsZiehung = False
 
-	def Setup():
+	def Setup(self):
 		pass

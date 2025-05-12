@@ -18,12 +18,12 @@ class Lottospiel:
 			weitererStimmzettel = True
 			while weitererStimmzettel:
 				karte = LottoKarte()
-				karte.Setup()
+				karte.Setup() #setup der Lottokarte wie z.b. spiele menge 1-18, tage an denen gelost wird
 				self.Lottokarten.append( karte )
 				if len(karte.GetSpiele()) == 18:
 					angabeValid = True
 					while not angabeValid:
-						angabe = input("wolen sie eine weitere Karte ausfüllen?(ja/nein): ").lower()
+						angabe = input("wollen sie eine weitere Karte ausfüllen?(ja/nein): ").lower()
 						match(angabe):
 							case "ja":
 								angabeValid = True
@@ -34,6 +34,7 @@ class Lottospiel:
 								weitererStimmzettel = False
 								break
 							case _:
+								print("entschuldigung, aber die eingabe war nicht gültig")
 								angabeValid = False
 				else:
 					weitererStimmzettel = False
