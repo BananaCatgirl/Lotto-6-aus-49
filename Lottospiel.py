@@ -5,7 +5,7 @@
 # es wird eine ziehung gestartet
 
 from LottoKarte.LottoKarte import LottoKarte
-import Ziehung.LottoZiehung
+import Ziehung.LottoZiehung as Ziehung
 from Kasse.Kasse import Kasse
 
 
@@ -52,6 +52,7 @@ class Lottospiel:
 
 	def StartZiehung(self):
 		try:
+			#Ziehung.starte_ziehung('liste', 'superzahl')
 			pass
 		except:
 			print("Fehler beim ausführen der Ziehung")
