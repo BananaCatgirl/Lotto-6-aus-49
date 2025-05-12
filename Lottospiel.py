@@ -5,7 +5,7 @@
 # es wird eine ziehung gestartet
 
 from LottoKarte.LottoKarte import LottoKarte
-from Ziehung.Ziehung import Ziehung
+import Ziehung.LottoZiehung
 from Kasse.Kasse import Kasse
 
 
