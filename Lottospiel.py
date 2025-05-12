@@ -28,11 +28,11 @@ class Lottospiel:
 							case "ja":
 								angabeValid = True
 								weitererStimmzettel = True
-								break
+								
 							case "nein":
 								angabeValid = True
 								weitererStimmzettel = False
-								break
+								
 							case _:
 								print("entschuldigung, aber die eingabe war nicht gültig")
 								angabeValid = False
