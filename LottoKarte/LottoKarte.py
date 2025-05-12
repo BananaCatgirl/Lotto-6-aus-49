@@ -1,3 +1,5 @@
+import Spiel as Spielrunde
+
 class LottoKarte:
 	def __init__(self):
 		self.spiele = []
@@ -35,13 +37,18 @@ class LottoKarte:
 				print("angabe war nicht gültig.")
 				ungültig = True
 
-		match tagesAbfrage:
-			case 1:
-				pass
-			case 2:
-				pass
-			case 3:
-				pass
+		match (tagesAbfrage):#an welchen tagen sol gespielt werden
+			case 1:#Mittwoch
+				self.mittwochsZiehung = True
+			case 2:#Samstag
+				self.SamstagsZiehung = True
+			case 3:#Mittwoch und Samstag
+				self.mittwochsZiehung = True
+				self.SamstagsZiehung = True
+
+		for i in range(gewünschteSpieleMenge):
+			spiel = Spiel()
+			spiel.Ankreuzen()
 
 		
 
