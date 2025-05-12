@@ -8,13 +8,13 @@ class Ziehung:
 
     def ZiehungErstellen(self):
         self.ziehung_zahlen = random.sample(range(1, 50), 6)
-        self.ziehung_super = random.randint(0, 9)
+        self.ziehung_super = random.randint(1, 9)
         x = self.Vergleich()
         if x == 6:
             return x
         else:
             gewinn = self.jackpot * x
-            return gewinn, self.ziehung_super, self.ziehung_zahlen
+            return gewinn, self.ziehung_super, self.sort()
         
     ausschüttung = {
         6: 0.15,
@@ -33,6 +33,17 @@ class Ziehung:
                 return 0
         else:
             return 0
+        
+    def sort(self):
+        sorted = False
+        l = self.ziehung_zahlen
+        while not sorted:
+            sorted = True
+            for i in range(len(l) - 1):
+                if l[i] > l[i + 1]:
+                    l[i], l[i + 1] = l[i + 1], l[i]
+                    sorted = False
+        return l
     
 i = 1           
 def starte_ziehung(list, super):
