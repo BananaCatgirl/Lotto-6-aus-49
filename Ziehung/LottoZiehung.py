@@ -48,13 +48,16 @@ class Ziehung:
 i = 1           
 def starte_ziehung(list, super):
     global i 
-    ziehung = Ziehung(list, super)
-    x, sup, num = ziehung.ZiehungErstellen()
-    print(f'Ziehung: {i}, Lotto Nummer: {num} Superzahl {sup} \nGewinn: {x}€')
+    gewinn, sup, num = Ziehung(list, super).ZiehungErstellen()
+    print(f'Ziehung {i}:')
+    for y in range(0, len(num), 3):
+        print(num[y],"|", num[y+1],"|", num[y+2])
+    print(f'Superzahl: {sup}\nGewinn: {gewinn}€\n')
+
     i += 1
 
 #Bsp.
-starte_ziehung([1,2,3,4,5,6], 5)
+#starte_ziehung([1,2,3,4,5,6], 5)
 #starte_ziehung([1,2,3,4,5,6], 3)
 #starte_ziehung([1,2,3,4,5,6], 3)
 
