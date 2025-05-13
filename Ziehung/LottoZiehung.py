@@ -1,4 +1,4 @@
-import random
+import random, time
 
 class Ziehung:
     def __init__(self, zahlen, superzahl):
@@ -9,12 +9,12 @@ class Ziehung:
     def ZiehungErstellen(self):
         self.ziehung_zahlen = random.sample(range(1, 50), 6)
         self.ziehung_super = random.randint(1, 9)
-        x = self.Vergleich()
-        if x == 6:
-            return x
+        anteil = self.Vergleich()
+        if anteil == 6:
+            gewinn = 6
         else:
-            gewinn = self.jackpot * x
-            return round(gewinn, 2), self.ziehung_super, self.sort()
+            gewinn = self.jackpot * anteil
+        return round(gewinn, 2), self.ziehung_super, self.sort()
         
     ausschüttung = {
         6: 0.15,
@@ -49,12 +49,13 @@ i = 1
 def starte_ziehung(list, super):
     global i 
     gewinn, sup, num = Ziehung(list, super).ZiehungErstellen()
+    
     print(f'Ziehung {i}:')
     for y in range(0, len(num), 3):
         print(num[y],"|", num[y+1],"|", num[y+2])
     print(f'Superzahl: {sup}\nGewinn: {gewinn}€\n')
-    
     i += 1
+    return gewinn
 
 #Bsp.
 #starte_ziehung([1,2,3,4,5,6], 5)
