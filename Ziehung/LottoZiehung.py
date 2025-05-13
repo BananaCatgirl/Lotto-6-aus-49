@@ -55,12 +55,11 @@ def starte_ziehung(list, super):
     print(f'Superzahl: {sup}\nGewinn: {gewinn}€\n')
     
     i += 1
-    return gewinn
 
 #Bsp.
-starte_ziehung([1,2,3,4,5,6], 5)
-starte_ziehung([1,2,3,4,5,6], 3)
-starte_ziehung([1,2,3,4,5,6], 3)
+#starte_ziehung([1,2,3,4,5,6], 5)
+#starte_ziehung([1,2,3,4,5,6], 3)
+#starte_ziehung([1,2,3,4,5,6], 3)
 
 
 # Das Programm erwartet das man die Funktion "starte_ziehung" mit den variablen für
