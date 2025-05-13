@@ -14,7 +14,7 @@ class Ziehung:
             return x
         else:
             gewinn = self.jackpot * x
-            return gewinn, self.ziehung_super, self.sort()
+            return round(gewinn, 2), self.ziehung_super, self.sort()
         
     ausschüttung = {
         6: 0.15,
@@ -53,13 +53,14 @@ def starte_ziehung(list, super):
     for y in range(0, len(num), 3):
         print(num[y],"|", num[y+1],"|", num[y+2])
     print(f'Superzahl: {sup}\nGewinn: {gewinn}€\n')
-
+    
     i += 1
+    return gewinn
 
 #Bsp.
-#starte_ziehung([1,2,3,4,5,6], 5)
-#starte_ziehung([1,2,3,4,5,6], 3)
-#starte_ziehung([1,2,3,4,5,6], 3)
+starte_ziehung([1,2,3,4,5,6], 5)
+starte_ziehung([1,2,3,4,5,6], 3)
+starte_ziehung([1,2,3,4,5,6], 3)
 
 
 # Das Programm erwartet das man die Funktion "starte_ziehung" mit den variablen für
