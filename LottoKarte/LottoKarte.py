@@ -1,4 +1,4 @@
-import Spiel as Spielrunde
+import LottoKarte.Spiel
 
 class LottoKarte:
 	def __init__(self):
@@ -47,7 +47,7 @@ class LottoKarte:
 				self.SamstagsZiehung = True
 
 		for i in range(gewünschteSpieleMenge):
-			spiel = Spiel()
+			spiel = Spiel.Spiel()
 			spiel.Ankreuzen()
 
 		
