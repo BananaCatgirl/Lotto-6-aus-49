@@ -6,7 +6,7 @@ class Ziehung:
         self.superzahl = superzahl
         self.jackpot = 1000000
 
-    def ZiehungErstellen(self):
+    
         self.ziehung_zahlen = random.sample(range(1, 50), 6)
         self.ziehung_super = random.randint(1, 9)
         anteil = self.Vergleich()
