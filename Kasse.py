@@ -1,4 +1,5 @@
 import LottoKarte as Karte
+
 class Kasse:
     def __init__(self, Lottokarten):
         self.Lottokarten = Lottokarten
@@ -41,6 +42,18 @@ class Kasse:
             if input().lower() == "ja":
                 break
 
+        # Altersabfrage
+        while True:
+            print("\nSind Sie mindestens 18 Jahre alt? (ja/nein)")
+            self.alter_bestaetigt = input().lower()
+            if self.alter_bestaetigt == "ja":
+                break
+            elif self.alter_bestaetigt == "nein":
+                print("Teilnahme nicht möglich. Sie müssen mindestens 18 Jahre alt sein.")
+                continue
+            else:
+                print("Bitte geben Sie 'ja' oder 'nein' ein.")
+
         # Gesamtdaten anzeigen
         print("\nZusammenfassung deiner Eingaben:")
         print("Vorname:", self.vorname)
@@ -48,5 +61,8 @@ class Kasse:
         print("Adresse:", self.adresse)
         print("Postleitzahl:", self.postleitzahl)
         print("E-Mail:", self.email)
-        print(f"Vielen Dank! Deine Daten wurden gespeichert und sie müssen insgesamt ({1,20 * Karte.LottoKarte.GetMengeSpiele()})Zahlen.")
-# Objekt erzeuge
+        print("Mindestens 18 Jahre alt:", self.alter_bestaetigt)
+        print(f"Vielen Dank! Deine Daten wurden gespeichert und du musst insgesamt {1.20 * len(self.Lottokarten):.2f} € zahlen.")
+
+# Objekt erzeugen (Beispiel)
+k = Kasse([])
