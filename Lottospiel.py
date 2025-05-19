@@ -66,6 +66,6 @@ def main():
 		HauptSpiel.StartZiehung()
 		pass
 
-if __name__ == "main":
+if __name__ == "__main__":
 	print("\n\nWilkommen zu Lotto 6 aus 49\n\n")
 	main()
