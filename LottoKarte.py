@@ -1,4 +1,4 @@
-import LottoKarte.Spiel as Spiel
+import Spiel as Spiel
 
 class LottoKarte:
 	def __init__(self):

@@ -4,7 +4,7 @@
 # es wird kassiert
 # es wird eine ziehung gestartet
 
-from LottoKarte.LottoKarte import LottoKarte
+from LottoKarte import LottoKarte
 import LottoZiehung as Ziehung
 from Kasse import Kasse
 
