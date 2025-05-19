@@ -1,3 +1,4 @@
+import zahlenAuswahl
 class Spiel:
 	def __init__(self):
 		self.zahlenAngekreuzt = [] # 6 zahlen die von spieler angekreuzt werden
@@ -5,9 +6,19 @@ class Spiel:
 	def GetAngekreuzteZahlen(self):
 		return self.zahlen
 	
-	def Ankreuzen(self,z1,z2,z3,z4,z5,z6):
-
-		zahlen = [z1,z2,z3,z4,z5,z6]
+	def Ankreuzen(self):
+		ankreuzenGültig = False
+		while not ankreuzenGültig:
+			try:
+				print("\n1.manuell\n2.zufall\n3.Sternzeichen\n")
+				auswahl = int(input("wie wollen sie die zahlen festlegen?(1/2/3)"))
+				if auswahl == 1:
+					zahlenAuswahl.manuellWählen
+				else:
+					ankreuzenGültig = False
+			except:
+				print("we fucked up beim zahlen auswählen")
+		zahlen = []
 		zahlenDieExistieren = []
 		for zahl in zahlen:
 			if zahl in zahlenDieExistieren:
