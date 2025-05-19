@@ -5,8 +5,8 @@
 # es wird eine ziehung gestartet
 
 from LottoKarte.LottoKarte import LottoKarte
-import Ziehung.LottoZiehung as Ziehung
-from Kasse.Kasse import Kasse
+import LottoZiehung as Ziehung
+from Kasse import Kasse
 
 
 class Lottospiel:
