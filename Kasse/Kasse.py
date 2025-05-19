@@ -1,3 +1,4 @@
+import LottoKarte.LottoKarte as Karte
 class Kasse:
     def __init__(self, Lottokarten):
         self.Lottokarten = Lottokarten
@@ -47,6 +48,5 @@ class Kasse:
         print("Adresse:", self.adresse)
         print("Postleitzahl:", self.postleitzahl)
         print("E-Mail:", self.email)
-        print("Vielen Dank! Deine Daten wurden gespeichert.")
-
-# Objekt erzeugen
+        print(f"Vielen Dank! Deine Daten wurden gespeichert und sie müssen insgesamt ({1,20 * Karte.LottoKarte.GetMengeSpiele()})Zahlen.")
+# Objekt erzeuge
