@@ -13,12 +13,20 @@ class Spiel:
 				print("\n1.manuell\n2.zufall\n3.Sternzeichen\n")
 				auswahl = int(input("wie wollen sie die zahlen festlegen?(1/2/3)"))
 				if auswahl == 1:
-					zahlenAuswahl.manuellWählen
+					zahlen, superzahl = zahlenAuswahl.manuellWählen()
+					ankreuzenGültig = True
+				elif auswahl == 2:
+					zahlen, superzahl = zahlenAuswahl.RandomWählen()
+					ankreuzenGültig = True
+				elif auswahl == 3:
+					zahlen, superzahl = zahlenAuswahl.SternzeichenWählen()
+					ankreuzenGültig = True
 				else:
 					ankreuzenGültig = False
 			except:
 				print("we fucked up beim zahlen auswählen")
-		zahlen = []
+
+		print("danke für deine ausgewählten zahlen")
 		zahlenDieExistieren = []
 		for zahl in zahlen:
 			if zahl in zahlenDieExistieren:
@@ -32,3 +40,4 @@ class Spiel:
 			print("die menge an angekreuzten zahlen ist nicht 6. Das sollte so nicht sein.")
 		else:
 			self.zahlenAngekreuzt = zahlenDieExistieren
+			self.superzahl = superzahl
