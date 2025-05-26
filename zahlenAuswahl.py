@@ -13,7 +13,7 @@ def SternzeichenWählen():
 		elif abfrage_sternzeichen == "stier":
 			sternzeichen = 2
 			break
-		elif abfrage_sternzeichen == "zwillinge":
+		elif abfrage_sternzeichen == "zwilling":
 			sternzeichen = 3
 			break
 		elif abfrage_sternzeichen == "krebs":
