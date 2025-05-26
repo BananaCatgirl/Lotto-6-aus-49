@@ -6,7 +6,7 @@ def RandomWählen():
 	pass
 def SternzeichenWählen():
 	while True:
-		abfrage_sternzeichen = input("Bitte geben Sie Ihr Sternzeichen ein").lower()
+		abfrage_sternzeichen = input("Bitte geben Sie Ihr Sternzeichen ein: ").lower()
 		if abfrage_sternzeichen == "widder":
 			sternzeichen = 1
 			break
