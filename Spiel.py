@@ -41,3 +41,9 @@ class Spiel:
 		else:
 			self.zahlenAngekreuzt = zahlenDieExistieren
 			self.superzahl = superzahl
+
+	def GetSuperzahl(self):
+		return self.superzahl
+	
+	def GetZahlenangekreuzt(self):
+		return  self.zahlenAngekreuzt
