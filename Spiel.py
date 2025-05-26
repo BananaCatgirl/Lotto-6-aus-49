@@ -4,10 +4,10 @@ class Spiel:
 		self.zahlenAngekreuzt = [] # 6 zahlen die von spieler angekreuzt werden
 		self.superzahl = 0
 
-	def GetAngekreuzteZahlen(self):
+	def GetAngekreuzteZahlen(self) -> list[int]:
 		return self.zahlenAngekreuzt
 	
-	def GetSuperzahl(self):
+	def GetSuperzahl(self) -> int:
 		return self.superzahl
 
 	def Ankreuzen(self):
