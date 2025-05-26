@@ -3,7 +3,18 @@ from datetime import datetime
 def manuellWählen():
 	pass
 def RandomWählen():
-	pass
+	random.seed()	
+	zahlen = []
+	for i in range(6):
+		zufallsZahl = random.randint(1,49)
+		while zahlen.count(zufallsZahl) > 0:
+			zufallsZahl = random.randint(1,49)
+
+		zahlen.append(zufallsZahl)
+	superzahl = random.randint(1,9)
+	return zufallsZahl, superzahl
+
+
 def SternzeichenWählen():
 	while True:
 		abfrage_sternzeichen = input("Bitte geben Sie Ihr Sternzeichen ein: ").lower()
