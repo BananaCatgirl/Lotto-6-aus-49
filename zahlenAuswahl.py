@@ -34,7 +34,7 @@ def RandomWählen():
 
 		zahlen.append(zufallsZahl)
 	superzahl = random.randint(1,9)
-	return zufallsZahl, superzahl
+	return zahlen, superzahl
 
 
 def SternzeichenWählen():
