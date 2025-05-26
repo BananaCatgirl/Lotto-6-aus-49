@@ -17,6 +17,7 @@ class Lottospiel:
 		try:
 			weitererStimmzettel = True
 			while weitererStimmzettel:
+				weitererStimmzettel = False
 				karte = LottoKarte()
 				karte.Setup() #setup der Lottokarte wie z.b. spiele menge 1-18, tage an denen gelost wird
 				self.Lottokarten.append( karte )
@@ -59,12 +60,13 @@ class Lottospiel:
 
 
 def main():
-	while True:
+	runProgramm = True
+	while runProgramm:
+		runProgramm = False
 		HauptSpiel = Lottospiel()
 		HauptSpiel.StartLottoKarten()
 		HauptSpiel.StartKasse()
 		HauptSpiel.StartZiehung()
-		pass
 
 if __name__ == "__main__":
 	print("\n\nWilkommen zu Lotto 6 aus 49\n\n")
