@@ -63,11 +63,11 @@ def main():
 	runProgramm = True
 	while runProgramm:
 		runProgramm = False
+		print("\n\n\n\n\nWilkommen zu Lotto 6 aus 49\n\n")
 		HauptSpiel = Lottospiel()
 		HauptSpiel.StartLottoKarten()
 		HauptSpiel.StartKasse()
 		HauptSpiel.StartZiehung()
 
 if __name__ == "__main__":
-	print("\n\nWilkommen zu Lotto 6 aus 49\n\n")
 	main()
