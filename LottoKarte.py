@@ -57,7 +57,7 @@ class LottoKarte:
 		for i in range(gewünschteSpieleMenge):
 			try:
 				spiel = Spiel.Spiel()
-				print(f"\n\n\n Spiel Nummer{i}")
+				print(f"\n\n\n Spiel Nummer {i+1}")
 				spiel.Ankreuzen()
 			except:
 				print("we encountered an error while setting a spiel auf einer lottokarte.")
