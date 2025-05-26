@@ -6,14 +6,14 @@ def RandomWählen():
 	pass
 def SternzeichenWählen():
 	while True:
-		abfrage_sternzeichen = input("Bitte geben Sie Ihr Sternzeichen ein").lower()
+		abfrage_sternzeichen = input("Bitte geben Sie Ihr Sternzeichen ein: ").lower()
 		if abfrage_sternzeichen == "widder":
 			sternzeichen = 1
 			break
 		elif abfrage_sternzeichen == "stier":
 			sternzeichen = 2
 			break
-		elif abfrage_sternzeichen == "zwillinge":
+		elif abfrage_sternzeichen == "zwilling":
 			sternzeichen = 3
 			break
 		elif abfrage_sternzeichen == "krebs":
