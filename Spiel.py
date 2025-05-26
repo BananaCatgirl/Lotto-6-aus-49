@@ -2,10 +2,14 @@ import zahlenAuswahl
 class Spiel:
 	def __init__(self):
 		self.zahlenAngekreuzt = [] # 6 zahlen die von spieler angekreuzt werden
+		self.superzahl = 0
 
 	def GetAngekreuzteZahlen(self):
-		return self.zahlen
+		return self.zahlenAngekreuzt
 	
+	def GetSuperzahl(self):
+		return self.superzahl
+
 	def Ankreuzen(self):
 		ankreuzenGültig = False
 		while not ankreuzenGültig:
@@ -41,9 +45,3 @@ class Spiel:
 		else:
 			self.zahlenAngekreuzt = zahlenDieExistieren
 			self.superzahl = superzahl
-
-	def GetSuperzahl(self):
-		return self.superzahl
-	
-	def GetZahlenangekreuzt(self):
-		return  self.zahlenAngekreuzt
