@@ -1,7 +1,29 @@
 import random
 from datetime import datetime
+
+
+
 def manuellWählen():
-	pass
+	zahlen = [0,0,0,0,0,0]
+	i = 0
+	try:
+
+		for zahl in zahlen:
+			print(f"auswahl von zahl {i+1}")
+			zahl = int(input("bitte geben sie eine zahl an zwischen 1 - 49: "))
+			while zahlen.count(zahl) > 1:
+				print("die angegebene zahl ist doppelt. bitte eine andere zahl auswählen.")
+				zahl = int(input("bitte geben sie eine zahl an zwischen 1 - 49: "))
+		i+=1
+		zufallsZahl = int(input("bitte geben sie eine zahl an zwischen 1 - 6: "))
+	
+	except:
+		print("manuelle auswahl der zahlen ist gescheitert")
+
+
+	return zahlen, zufallsZahl
+
+
 def RandomWählen():
 	random.seed()	
 	zahlen = []
