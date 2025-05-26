@@ -65,4 +65,4 @@ class Kasse:
         print(f"Vielen Dank! Deine Daten wurden gespeichert und du musst insgesamt {1.20 * len(self.Lottokarten):.2f} € zahlen.")
 
 # Objekt erzeugen (Beispiel)
-k = Kasse([])
+#k = Kasse([])
