@@ -51,6 +51,13 @@ def SternzeichenWählen():
 	zahlen = heute / sternzeichen
 	zahlen_str = str(int(zahlen))
 	auswahl = [int(zahlen_str[i:i+2]) for i in range(0, len(zahlen_str), 2)][:6]
+
+	for i in range(len(auswahl)):
+		while auswahl.count(auswahl[i]) > 1 or auswahl[i] > 49 or auswahl[i] < 1:
+			auswahl[i] += 1
+			if auswahl[i] > 49:
+				auswahl[i] = 1
+
 	superzahl = zahlen_str[-1]
 	if superzahl == "0":
 		superzahl = 1
