@@ -45,9 +45,10 @@ class Lottospiel:
 
 
 	def StartKasse(self):
-		try:
+		self.Lottokarten = LottoKarte.GetMengeSpiele()
+		try:	
 			self.Kasse = Kasse(self.Lottokarten)
-			#abrechnung = self.Kasse.Abrechnen()
+			abrechnung = self.Kasse.Abrechnen()
 		except:
 			print("Fehler beim ausführen der Kasse")
 
