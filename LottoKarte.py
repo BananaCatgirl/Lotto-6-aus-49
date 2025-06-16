@@ -5,21 +5,21 @@ class LottoKarte:
 		self.spiele = []
 		self.mittwochsZiehung = False
 		self.SamstagsZiehung = False
+		self.gewünschteMenge = 0
 
 	def Setup(self):# wieviele spiele aus 18max? welche losungs tage?
 		# spiele menge abfrage
-		gewünschteSpieleMenge = 0
 		
 		breakLoop = False
 		while not breakLoop:
 			try:
-				gewünschteSpieleMenge = int(input("wieviel spiele wollen sie spielen?(1-18): "))
-				if(gewünschteSpieleMenge > 18 ):
+				self.gewünschteSpieleMenge = int(input("wieviel spiele wollen sie spielen?(1-18): "))
+				if(self.gewünschteSpieleMenge > 18 ):
 					print("angabe war größer 18. zahl wid auf 18 gecapt.")
-				elif(gewünschteSpieleMenge < 1):
+				elif(self.gewünschteSpieleMenge < 1):
 					print("zahl führ spiele menge zu klein. Setze wert auf 1")
 				breakLoop = True
-				print(f"sie wollen also {gewünschteSpieleMenge} spielen, cool!")
+				print(f"sie wollen also {self.gewünschteSpieleMenge} spielen, cool!")
 			except:
 				print("sorry das ist keine gültige angabe.\n")
 				breakLoop = False
@@ -54,10 +54,10 @@ class LottoKarte:
 				self.SamstagsZiehung = True
 				print("mittwochs und samstags ziehung gesetzt")
 
-		for i in range(gewünschteSpieleMenge):
+		for i in range(self.gewünschteSpieleMenge):
 			try:
 				spiel = Spiel.Spiel()
-				print(f"\n\n\n Spiel Nummer {i+1}")
+				print(f"\n\n\n Spiel Nummer{i}")
 				spiel.Ankreuzen()
 			except:
 				print("we encountered an error while setting a spiel auf einer lottokarte.")
@@ -78,4 +78,7 @@ class LottoKarte:
 	
 	def GetZiehungsTagSamstag(self)->bool:
 		return self.SamstagsZiehung
+	
+	def GetgewünschteMenge(self):
+		return self.gewünschteMenge
 	
