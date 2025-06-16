@@ -51,13 +51,13 @@ class Lottospiel:
 	def StartZiehung(self):
 		x = self.karte.GetMengeSpiele()
 		for i in range(x):
-			zahl, super = self.karte.getAngekreuzt()
+			zahlen, super = self.karte.getAngekreuzt()
 			x = input('Wollen sie die Ziehung starten? ')
 			if x == 'ja':
 				y = True
 			if y == True:
 				try:
-					Ziehung.starte_ziehung(zahl, super)
+					Ziehung.starte_ziehung(zahlen, super)
 					pass
 				except:
 					print("Fehler beim ausführen der Ziehung")

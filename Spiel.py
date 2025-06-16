@@ -40,10 +40,10 @@ class Spiel:
 			print("die menge an angekreuzten zahlen ist nicht 6. Das sollte so nicht sein.")
 		else:
 			self.zahlenAngekreuzt = zahlenDieExistieren
-			self.superzahl = superzahl
+			self.superzahl = int(superzahl)
 
 	def GetSuperzahl(self):
-		return self.superzahl
+		return int(self.superzahl)
 	
 	def GetZahlenangekreuzt(self):
 		return  self.zahlenAngekreuzt
