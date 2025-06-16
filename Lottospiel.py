@@ -45,22 +45,22 @@ class Lottospiel:
 
 
 	def StartKasse(self):
-		self.Lottokarten = LottoKarte.GetMengeSpiele()
-		try:	
-			self.Kasse = Kasse(self.Lottokarten)
-			abrechnung = self.Kasse.Abrechnen()
-		except:
-			print("Fehler beim ausführen der Kasse")
-
+		x = self.karte.GetMengeSpiele()	
+		self.Kasse = Kasse(x)
 
 	def StartZiehung(self):
-		x = self.karte.GetSpiele()
-		x[0].Getzahlenangekreuzt()
-		try:
-			#Ziehung.starte_ziehung(, )
-			pass
-		except:
-			print("Fehler beim ausführen der Ziehung")
+		x = self.karte.GetMengeSpiele()
+		for i in range(x):
+			zahl, super = self.karte.getAngekreuzt()
+			x = input('Wollen sie die Ziehung starten? ')
+			if x == 'ja':
+				y = True
+			if y == True:
+				try:
+					Ziehung.starte_ziehung(zahl, super)
+					pass
+				except:
+					print("Fehler beim ausführen der Ziehung")
 
 
 def main():

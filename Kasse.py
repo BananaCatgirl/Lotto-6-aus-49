@@ -62,7 +62,7 @@ class Kasse:
         print("Postleitzahl:", self.postleitzahl)
         print("E-Mail:", self.email)
         print("Mindestens 18 Jahre alt:", self.alter_bestaetigt)
-        print(f"Vielen Dank! Deine Daten wurden gespeichert und du musst insgesamt {1.20 * len(self.Lottokarten):.2f} € zahlen.")
+        print(f"Vielen Dank! Deine Daten wurden gespeichert und du musst insgesamt {round(1.2 * self.Lottokarten, 2)} € zahlen.")
 
 # Objekt erzeugen (Beispiel)
 #k = Kasse([])

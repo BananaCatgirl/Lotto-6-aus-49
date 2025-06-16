@@ -56,10 +56,10 @@ class LottoKarte:
 
 		for i in range(self.gewünschteSpieleMenge):
 			try:
-				spiel = Spiel.Spiel()
+				self.spiel = Spiel.Spiel()
 				print(f"\n\n\n Spiel Nummer {i+1}")
-				spiel.Ankreuzen()
-				self.spiele.append(spiel)
+				self.spiel.Ankreuzen()
+				self.spiele.append(self.spiel)
 			except:
 				print("we encountered an error while setting a spiel auf einer lottokarte.")
 
@@ -83,3 +83,5 @@ class LottoKarte:
 	def GetgewünschteMenge(self):
 		return self.gewünschteMenge
 	
+	def getAngekreuzt(self):
+		return self.spiel.GetZahlenangekreuzt(), self.spiel.superzahl
