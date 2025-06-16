@@ -7,6 +7,7 @@
 from LottoKarte import LottoKarte
 import LottoZiehung as Ziehung
 from Kasse import Kasse
+import Spiel
 
 
 class Lottospiel:
@@ -18,10 +19,10 @@ class Lottospiel:
 			weitererStimmzettel = True
 			while weitererStimmzettel:
 				weitererStimmzettel = False
-				karte = LottoKarte()
-				karte.Setup() #setup der Lottokarte wie z.b. spiele menge 1-18, tage an denen gelost wird
-				self.Lottokarten.append( karte )
-				if len(karte.GetSpiele()) == 18:
+				self.karte = LottoKarte()
+				self.karte.Setup() #setup der Lottokarte wie z.b. spiele menge 1-18, tage an denen gelost wird
+				self.Lottokarten.append( self.karte )
+				if len(self.karte.GetSpiele()) == 18:
 					angabeValid = True
 					while not angabeValid:
 						angabe = input("wollen sie eine weitere Karte ausfüllen?(ja/nein): ").lower()
@@ -52,8 +53,10 @@ class Lottospiel:
 
 
 	def StartZiehung(self):
+		x = self.karte.GetSpiele()
+		x[0].Getzahlenangekreuzt()
 		try:
-			#Ziehung.starte_ziehung('liste', 'superzahl')
+			#Ziehung.starte_ziehung(, )
 			pass
 		except:
 			print("Fehler beim ausführen der Ziehung")
